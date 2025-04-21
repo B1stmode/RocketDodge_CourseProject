@@ -488,6 +488,7 @@ GameObject:
   - component: {fileID: 3971481149957695290}
   - component: {fileID: 5503150637177901397}
   - component: {fileID: 3304347962555936492}
+  - component: {fileID: 2839868245903588194}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -530,8 +531,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.39, y: 1.89, z: 1.54}
-  m_Center: {x: 0.16, y: 1, z: 0}
+  m_Size: {x: 1.5305891, y: 1.8899999, z: 1.2473153}
+  m_Center: {x: 0.123328686, y: 1, z: -0.14634234}
 --- !u!54 &3864693137177393124
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -736,6 +737,27 @@ MonoBehaviour:
   levelLoadDelay: 2
   success: {fileID: 8300000, guid: 65526f2e7ec100945969bb8395c04709, type: 3}
   crash: {fileID: 8300000, guid: d468a260c4965bd4da98a7326f9319e5, type: 3}
+--- !u!65 &2839868245903588194
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4492314973440361528}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.5215826, y: 0.66486955, z: 1.2473153}
+  m_Center: {x: 0.11243868, y: 0.38743484, z: -0.14634234}
 --- !u!1 &4575850863381860836
 GameObject:
   m_ObjectHideFlags: 0
