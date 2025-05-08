@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class ColisionHandller : MonoBehaviour
@@ -10,15 +11,32 @@ public class ColisionHandller : MonoBehaviour
     [SerializeField] ParticleSystem successParticles;
     [SerializeField] ParticleSystem crashParticles;
     bool isControllable = true;
+    bool isColidable = true;
 
     AudioSource audioSource;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
+
+    void Update()
+    {
+        RespondToDebugKeys();
+    }
+    void RespondToDebugKeys()
+    {
+        if (Keyboard.current.lKey.wasPressedThisFrame)
+        {
+            LoadNextLevel();
+        }
+
+    }
     private void OnCollisionEnter(Collision other)
     {
         if (!isControllable)
+        {
+            return;
+        }
         {
             return;
         }
