@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -21,9 +22,12 @@ public class ColisionHandller : MonoBehaviour
 
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.R))
+        {
+            ReloadLevel();
+        }
     }
-    private void OnCollisionEnter(Collision other)
+private void OnCollisionEnter(Collision other)
     {
         if (!isControllable)
         {
@@ -62,24 +66,23 @@ public class ColisionHandller : MonoBehaviour
         audioSource.PlayOneShot(crashSFX);
         GetComponent<Movement>().enabled = false;
         Invoke("ReloadLevel", levelLoadDelay);
-
-
     }
 
-    void ReloadLevel()  
-        {
-            int currentScene = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(currentScene);
-        }
+    public void ReloadLevel()
+    {
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentScene);
+    }
 
-        void LoadNextLevel()
+
+    void LoadNextLevel()
+    {
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        int nextScene = currentScene + 1;
+        if (nextScene == SceneManager.sceneCountInBuildSettings)
         {
-            int currentScene = SceneManager.GetActiveScene().buildIndex;
-            int nextScene = currentScene + 1;
-            if (nextScene == SceneManager.sceneCountInBuildSettings)
-            {
-                nextScene = 0;
-            }
-            SceneManager.LoadScene(nextScene);
+            nextScene = 0;
         }
+        SceneManager.LoadScene(nextScene);
+    }
 }

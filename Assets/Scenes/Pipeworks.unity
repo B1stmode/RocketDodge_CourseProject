@@ -3730,7 +3730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6272939657866521085, guid: c5b8a2a53619e8340aaaa1a5adda44f3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -20.24
+      value: -22.1
       objectReference: {fileID: 0}
     - target: {fileID: 6272939657866521085, guid: c5b8a2a53619e8340aaaa1a5adda44f3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5411,7 +5411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementVector: {x: 0, y: 5, z: 0}
-  speed: 1.2
+  speed: 1
 --- !u!4 &1359405450 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6272939657866521085, guid: c5b8a2a53619e8340aaaa1a5adda44f3, type: 3}

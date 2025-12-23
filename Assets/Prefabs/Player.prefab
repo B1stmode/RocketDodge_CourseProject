@@ -119,6 +119,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Thrust
       m_Flags: 0
+    - m_Name: 
+      m_Id: 3e609b2b-e456-4dd9-a3ac-7da7342d2f17
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Thrust
+      m_Flags: 0
     m_Flags: 0
   rotation:
     m_Name: Rotation
@@ -147,6 +155,30 @@ MonoBehaviour:
     - m_Name: negative
       m_Id: e7c624fa-2952-4a8a-bf7c-4502e8f2ba25
       m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotation
+      m_Flags: 8
+    - m_Name: Rotation
+      m_Id: 39d39145-2491-41eb-a570-a2517ca2c07a
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotation
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: 948b935e-bc96-44f6-b62d-6db202bc07b1
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotation
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: 9606e733-c11b-40c3-86aa-5a274c542cba
+      m_Path: <Keyboard>/d
       m_Interactions: 
       m_Processors: 
       m_Groups: 
