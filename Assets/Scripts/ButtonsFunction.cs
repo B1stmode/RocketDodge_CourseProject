@@ -25,12 +25,12 @@ public class ButtonsFunction : MonoBehaviour
 
     public void LoadThird()
     {
-        SceneManager.LoadScene("The hook");
+        SceneManager.LoadScene("The Hook");
     }
 
     public void LoadFourth()
     {
-        SceneManager.LoadScene("The site");
+        SceneManager.LoadScene("The Site");
     }
     public void LoadFifth()
     {
@@ -43,6 +43,7 @@ public class ButtonsFunction : MonoBehaviour
 
     public void LoadMenu()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("Main menu");
         DeathCount.instance.ResetCounter();
     }
@@ -80,7 +81,7 @@ public class ButtonsFunction : MonoBehaviour
 
     public void Start()
     {
-        EventSystem.current.SetSelectedGameObject(null);
+
     }
     public void Resume()
     {
@@ -94,7 +95,5 @@ public class ButtonsFunction : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
-
-        EventSystem.current.SetSelectedGameObject(null);
     }
 }

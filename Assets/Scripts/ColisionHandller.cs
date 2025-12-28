@@ -6,9 +6,7 @@ using UnityEngine.SceneManagement;
 
 
 public class ColisionHandller : MonoBehaviour
-{
-    private PlayerControls inputActions;
-
+{ 
     [SerializeField] float levelLoadDelay = 2f;
     [SerializeField] AudioClip successSFX;
     [SerializeField] AudioClip crashSFX;
@@ -18,37 +16,21 @@ public class ColisionHandller : MonoBehaviour
 
     AudioSource audioSource;
 
-    private void Awake()
-    {
-        inputActions = new PlayerControls();
-    }
     void Start()
     {
+        Time.timeScale = 1.0f;
         audioSource = GetComponent<AudioSource>();
-    }
-
-    private void OnEnable()
-    {
-        inputActions.Player.Enable();
-        inputActions.Player.Restart.performed += OnRestartPerformed;
-    }
-
-    private void OnDisable()
-    {
-        inputActions.Player.Restart.performed -= OnRestartPerformed;
-        inputActions.Player.Disable();
-    }
-
-    private void OnRestartPerformed(InputAction.CallbackContext ctx)
-    {
-        ReloadLevel();
     }
 
     void Update()
     {
-  
+        if (Input.GetKey(KeyCode.R))
+        {
+            Time.timeScale = 1.0f;
+            ReloadLevel();
+        }
     }
-private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision other)
     {
         if (!isControllable)
         {
